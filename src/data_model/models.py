@@ -6,7 +6,6 @@ from sqlalchemy import (
     BIGINT,
     String,
     ForeignKey,
-    Table,
     Float,
     func,
     Index,
@@ -27,6 +26,7 @@ class BaseModel(Base):
     )
     is_active = Column(Boolean, nullable=False, server_default="1")
 
+
 class ProductInventoryAssociation(BaseModel):
     __tablename__ = 'product_inventory_association'
     id = Column(BIGINT, primary_key=True)
@@ -41,7 +41,7 @@ class Category(BaseModel):
     __tablename__ = 'categories'
     id = Column(BIGINT, primary_key=True)
     category_name = Column(String, nullable=False)
-    products = relationship('Product', backref='category', lazy='dynamic')
+    products = relationship('Product', backref='category', lazy=False)
 
     __table_args__ = (Index('idx_category', 'id', 'category_name'),)
 
@@ -66,7 +66,7 @@ class Inventory(BaseModel):
     id = Column(BIGINT, primary_key=True)
     inventory_name = Column(String, nullable=False)
     products = relationship(
-        'Product', secondary=ProductInventoryAssociation.__tablename__, back_populates='inventories')
+        'Product', secondary=ProductInventoryAssociation.__tablename__, back_populates='inventories', lazy=False)
 
     __table_args__ = (Index('idx_inventory', 'id', 'inventory_name'),)
 
