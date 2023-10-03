@@ -34,6 +34,12 @@ disable = [
     "use-symbolic-message-instead",
     "use-dict-literal"
 ]
+[tool.pylint.format]
+ignore-long-lines = "^\\s*(# )?<?https?://\\S+>?$"
+indent-after-paren = 4
+indent-string = "    "
+max-line-length = 120
+max-module-lines = 1000
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
