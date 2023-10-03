@@ -1,4 +1,6 @@
 # Store-Management-FastAPI
+
+### Create Virtual env
 * Create virtual env with following commands
 ```console
 $ python -m venv .venv
@@ -24,6 +26,7 @@ $ .venv\Scripts\activate
 Once the virtualenv is activated, you can install the required dependencies.
 
 ```console
+$ pip install poetry
 $ poetry install 
 ```
 
