@@ -10,8 +10,30 @@ python = "^3.10"
 fastapi = "^0.103.2"
 uvicorn = {extras = ["standard"], version = "^0.23.2"}
 sqlalchemy = "^2.0.21"
+alembic = "^1.12.0"
+pydantic = "^2.4.2"
+psycopg2-binary = "^2.9.8"
 
-
+[tool.pylint.basic]
+good-names = ["i", "j", "k", "ex", "Run", "_","db","v","e"]
+disable = [
+    "missing-module-docstring",
+    "missing-class-docstring",
+    "missing-function-docstring",
+    "import-error",
+    "too-few-public-methods",
+    "no-name-in-module",
+    "unexpected-keyword-arg",
+    "raw-checker-failed",
+    "bad-inline-option",
+    "locally-disabled",
+    "file-ignored",
+    "suppressed-message",
+    "useless-suppression",
+    "deprecated-pragma",
+    "use-symbolic-message-instead",
+    "use-dict-literal"
+]
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
