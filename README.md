@@ -6,7 +6,7 @@
 python -m venv .venv
 ```
 * After the virtualenv is created, you can use the following
-step to activate your virtualenv.:
+step to activate your virtualenv
 
 For Mac and Linux:
 ```console
@@ -56,3 +56,17 @@ INFO:     Application startup complete.
 ```
 
 </div>
+
+### Access Swagger and Documentation
+
+*Once application is running successfully, you can use following links.
+For swagger:
+
+```console
+http://localhost:8000/docs
+```
+For documentation:
+
+```console
+http://localhost:8000/redoc
+```
