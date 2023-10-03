@@ -29,7 +29,14 @@ Once the virtualenv is activated, you can install the required dependencies.
 $ pip install poetry
 $ poetry install 
 ```
+### Setup Database and run migrations
 
+Once dependencies installed , go to settings.py in src and replace database_url with your db and run following commands.
+
+```console
+$ alembic upgrade head
+```
+Once migrations are run successfully, all tables must be appearing in the tables with sample data as well.
 ### Run it
 
 Run the server with:
