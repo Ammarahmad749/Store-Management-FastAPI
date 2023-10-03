@@ -3,22 +3,21 @@
 ### Create Virtual env
 * Create virtual env with following commands
 ```console
-$ python -m venv .venv
+python -m venv .venv
 ```
 * After the virtualenv is created, you can use the following
 step to activate your virtualenv.:
 
-```console
 For Mac and Linux:
-
-$ source .venv/bin/activate
-```
-
 ```console
 
-For Windows:
+source .venv/bin/activate
 
-$ .venv\Scripts\activate
+```
+For Windows:
+```console
+
+.venv\Scripts\activate
 ```
 
 ### Install Dependency Packages
@@ -26,15 +25,17 @@ $ .venv\Scripts\activate
 Once the virtualenv is activated, you can install the required dependencies.
 
 ```console
-$ pip install poetry
-$ poetry install 
+pip install poetry
+```
+```console
+poetry install 
 ```
 ### Setup Database and run migrations
 
 Once dependencies installed , go to settings.py in src and replace database_url with your db and run following commands.
 
 ```console
-$ alembic upgrade head
+alembic upgrade head
 ```
 Once migrations are run successfully, all tables must be appearing in the tables with sample data as well.
 ### Run it
