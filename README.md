@@ -59,7 +59,7 @@ INFO:     Application startup complete.
 
 ### Access Swagger and Documentation
 
-*Once application is running successfully, you can use following links.
+* Once application is running successfully, you can use following links.
 For swagger:
 
 ```console
