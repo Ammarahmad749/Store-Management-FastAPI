@@ -46,7 +46,7 @@ Run the server with:
 ```console
 // make sure you are at right directory before executing the command project root directory\src
 
-$ uvicorn main:app --reload
+$ uvicorn app:app --reload
 
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 INFO:     Started reloader process [28720]
